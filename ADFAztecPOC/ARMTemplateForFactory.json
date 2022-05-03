@@ -197,7 +197,14 @@
 							},
 							"sink": {
 								"type": "SqlServerSink",
-								"tableOption": "autoCreate"
+								"writeBehavior": "upsert",
+								"upsertSettings": {
+									"useTempDB": true,
+									"keys": [
+										"ID"
+									]
+								},
+								"sqlWriterUseTableLock": false
 							},
 							"enableStaging": false,
 							"validateDataConsistency": false,
@@ -251,7 +258,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "DestinationDataset_36j",
+								"referenceName": "SqlServerTable1",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -266,7 +273,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/SourceDataset_36j')]",
-				"[concat(variables('factoryId'), '/datasets/DestinationDataset_36j')]"
+				"[concat(variables('factoryId'), '/datasets/SqlServerTable1')]"
 			]
 		},
 		{
@@ -460,6 +467,57 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServerTable1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SqlServer1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "ID",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Code",
+						"type": "nvarchar"
+					},
+					{
+						"name": "NewCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Name",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Phone Number",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Email Address",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DOB",
+						"type": "date"
+					}
+				],
+				"typeProperties": {
+					"schema": "stg",
+					"table": "tB2C_Customer_Merge"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SqlServer1')]"
+			]
 		}
 	]
 }
