@@ -17,7 +17,7 @@
 		},
 		"ProfiseeRestService_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://am-548.entity.local/Profisee/REST/v1"
+			"defaultValue": "https://valconprofiseepaas.uksouth.cloudapp.azure.com/Profisee/REST/v1"
 		},
 		"containerUri": {
 			"type": "string",

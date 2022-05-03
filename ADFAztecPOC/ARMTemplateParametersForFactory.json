@@ -12,7 +12,7 @@
 			"value": "https://valconprofisee4paas.dfs.core.windows.net"
 		},
 		"ProfiseeRestService_properties_typeProperties_url": {
-			"value": "https://am-548.entity.local/Profisee/REST/v1"
+			"value": "https://valconprofiseepaas.uksouth.cloudapp.azure.com/Profisee/REST/v1"
 		}
 	}
 }
