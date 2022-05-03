@@ -1,0 +1,9 @@
+{
+	"name": "ADFAztecPOC",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0ce08985-9657-47f3-ae9e-90a4ed9da3fc",
+		"tenantId": "0f5a5040-9078-4bb8-98ef-123b88b65cc8"
+	}
+}
