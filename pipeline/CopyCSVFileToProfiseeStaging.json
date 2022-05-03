@@ -1,5 +1,5 @@
 {
-	"name": "CopyPipeline_36j",
+	"name": "CopyCSVFileToProfiseeStaging",
 	"properties": {
 		"activities": [
 			{
