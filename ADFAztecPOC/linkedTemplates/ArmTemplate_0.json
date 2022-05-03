@@ -444,7 +444,7 @@
 								"upsertSettings": {
 									"useTempDB": true,
 									"keys": [
-										"ID"
+										"Code"
 									]
 								},
 								"sqlWriterUseTableLock": false
