@@ -38,7 +38,14 @@
 					},
 					"sink": {
 						"type": "SqlServerSink",
-						"tableOption": "autoCreate"
+						"writeBehavior": "upsert",
+						"upsertSettings": {
+							"useTempDB": true,
+							"keys": [
+								""
+							]
+						},
+						"sqlWriterUseTableLock": false
 					},
 					"enableStaging": false,
 					"validateDataConsistency": false,
@@ -91,7 +98,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_36j",
+						"referenceName": "SqlServerTable1",
 						"type": "DatasetReference"
 					}
 				]

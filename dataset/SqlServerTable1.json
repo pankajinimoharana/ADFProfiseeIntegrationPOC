@@ -1,0 +1,46 @@
+{
+	"name": "SqlServerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NewCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Phone Number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Email Address",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DOB",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "stg",
+			"table": "tB2C_Customer_Merge"
+		}
+	}
+}
