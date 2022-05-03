@@ -1,0 +1,12 @@
+{
+	"name": "ProfiseeRestService",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://am-548.entity.local/Profisee/REST/v1",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
