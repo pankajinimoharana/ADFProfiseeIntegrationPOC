@@ -40,29 +40,29 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "Code",
+									"name": "SourceId",
 									"type": "String"
 								},
 								"sink": {
-									"path": "$['Code']"
+									"path": "$['SourceId']"
 								}
 							},
 							{
 								"source": {
-									"name": "Name",
+									"name": "CustomerName",
 									"type": "String"
 								},
 								"sink": {
-									"path": "$['Name']"
+									"path": "$['CustomerName']"
 								}
 							},
 							{
 								"source": {
-									"name": "Phone Number",
+									"name": "Phone",
 									"type": "String"
 								},
 								"sink": {
-									"path": "$['Phone Number']"
+									"path": "$['Phone']"
 								}
 							}
 						]
