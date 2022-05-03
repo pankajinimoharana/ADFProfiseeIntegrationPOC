@@ -184,7 +184,7 @@
 								"mappings": [
 									{
 										"source": {
-											"name": "Code",
+											"name": "SourceId",
 											"type": "String"
 										},
 										"sink": {
@@ -193,7 +193,7 @@
 									},
 									{
 										"source": {
-											"name": "Name",
+											"name": "CustomerName",
 											"type": "String"
 										},
 										"sink": {
@@ -202,7 +202,7 @@
 									},
 									{
 										"source": {
-											"name": "Phone Number",
+											"name": "Phone",
 											"type": "String"
 										},
 										"sink": {
