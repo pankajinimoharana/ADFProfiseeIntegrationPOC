@@ -1,5 +1,5 @@
 {
-	"name": "SqlServerTable1",
+	"name": "ProfiseePaas01",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServer1",

@@ -92,7 +92,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "SqlServerTable1",
+						"referenceName": "ProfiseePaas01",
 						"type": "DatasetReference"
 					}
 				]
