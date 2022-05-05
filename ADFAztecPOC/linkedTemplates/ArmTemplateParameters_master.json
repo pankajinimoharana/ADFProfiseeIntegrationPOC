@@ -11,6 +11,9 @@
 		"SqlServer1_connectionString": {
 			"value": ""
 		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://valconprofisee4paas.dfs.core.windows.net"
 		},

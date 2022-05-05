@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
 		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://valconprofisee4paas.dfs.core.windows.net"
@@ -75,6 +79,19 @@
 				"type": "SqlServer",
 				"typeProperties": {
 					"connectionString": "[parameters('SqlServer1_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabase1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureSqlDatabase1_connectionString')]"
 				}
 			},
 			"dependsOn": []
@@ -179,7 +196,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_36j')]",
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_B2C')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -221,7 +238,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/SqlServerTable1')]",
+			"name": "[concat(parameters('factoryName'), '/ProfiseePaas01')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -405,7 +422,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "Copy_36j",
+						"name": "Copy B2C Customer File To Staging",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -488,14 +505,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "SourceDataset_36j",
+								"referenceName": "SourceDataset_B2C",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "SqlServerTable1",
+								"referenceName": "ProfiseePaas01",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -509,8 +526,8 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/SourceDataset_36j')]",
-				"[concat(variables('factoryId'), '/datasets/SqlServerTable1')]"
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_B2C')]",
+				"[concat(variables('factoryId'), '/datasets/ProfiseePaas01')]"
 			]
 		}
 	]
