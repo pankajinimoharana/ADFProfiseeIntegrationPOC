@@ -86,7 +86,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_36j",
+						"referenceName": "SourceDataset_B2C",
 						"type": "DatasetReference"
 					}
 				],

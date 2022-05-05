@@ -1,5 +1,5 @@
 {
-	"name": "SourceDataset_36j",
+	"name": "SourceDataset_B2C",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
