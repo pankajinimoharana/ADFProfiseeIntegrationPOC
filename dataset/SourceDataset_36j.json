@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "B2CCustomers.csv",
 				"folderPath": "b2c_customer",
 				"fileSystem": "profisee-input"
 			},
