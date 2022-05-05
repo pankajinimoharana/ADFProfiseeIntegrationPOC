@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_36j",
+				"name": "Copy B2C Customer File To Staging",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
